@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    
+    /* Neutral */
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+    
+    /* Typography */
+    --font-size-paragraph: 16px;
+    
+    /* Font */
+    --font-family: 'Red Hat Display', sans-serif;
+    --font-weight-500: 500;
+    --font-weight-700: 700;
+    --font-weight-900: 900;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button {
+    font: inherit;
+    display: block;
+    border: none;
+}
+
+p, h1 {
+    overflow-wrap: break-word;
+}
+
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-font-smoothing: antialiased;
+    background-color: var(--pale-blue);
+    background-image: url(../images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-family: var(--font-family);
+    font-size: var(--font-size-paragraph);
+}
+
+.container {
+    width: 325px;
+    background-color: var(--very-pale-blue);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.component {
+    display: flex;
+    flex-direction: column;
+}
+
+.component-text {
+    margin: 1.5rem 1.4rem 1.6rem 1.4rem;
+}
+
+.title {
+    color: var(--dark-blue);
+    font-weight: var(--font-weight-900);
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.description {
+    color: var(--desaturated-blue);
+    text-align: center;
+    word-wrap: break-word;
+    font-size: 15px;
+    margin: 0 10px 22px;
+}
+
+.plan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsla(225, 100%, 94%, .5);
+    padding: 15px 12px;
+    border-radius: 8px;
+    line-height: 1.25;
+    margin-bottom: 1.75rem;
+}
+
+.plan-img {
+    margin-right: 1.5rem;
+}
+
+.plan-type {
+    color: var(--dark-blue);
+    font-weight: var(--font-weight-900);
+    font-size: 15px;
+}
+
+.plan-price {
+    color: var(--desaturated-blue);
+    font-weight: var(--font-weight-500);
+    font-size: 15px;
+}
+
+.plan-btn {
+    margin-left: auto;
+}
+
+.plan-btn a {
+    font-size: 14px;
+    color: var(--bright-blue);
+    font-weight: var(--font-weight-900);
+    transition: all .4s;
+}
+
+.plan-btn a:hover, .plan-btn a:focus {
+    opacity: .7;
+    text-decoration: none;
+}
+
+.proceed-payment {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    color: var(--very-pale-blue);
+    background-color: var(--bright-blue);
+    font-weight: var(--font-weight-900);
+    border-radius: 8px;
+    box-shadow: 0 10px 5px -5px hsla(245, 75%, 52%, .4); /*fix this*/
+    margin-bottom: 1.25rem;
+    transition: all .4s;
+}
+
+.proceed-payment:hover, .proceed-payment:focus {
+    opacity: .7;
+    transform: scale(1.025);
+}
+
+.cancel {
+    width: 100%;
+    font-size: 15px;
+    font-weight: var(--font-weight-900);
+    color: var(--desaturated-blue);
+    background-color: var(--very-pale-blue);
+    transition: all .4s;
+}
+
+.cancel:hover, .cancel:focus {
+    color: var(--dark-blue);
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        min-height: 100vh;
+        line-height: 1.5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        -webkit-font-smoothing: antialiased;
+        background-color: var(--pale-blue);
+        background-image: url(./images/pattern-background-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        font-family: var(--font-family);
+        font-size: var(--font-size-paragraph);
+    }
+    
+    .container {
+        width: 400px;
+        background-color: var(--very-pale-blue);
+        border-radius: 15px;
+        overflow: hidden;
+    }
+
+    .component-text {
+        margin: 1.5rem 1.4rem 1.6rem 1.4rem;
+    }
+
+}
+
+
